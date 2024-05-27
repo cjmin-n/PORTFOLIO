@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/* visual */
+.visual {
+  width: 100%;
+  height: 100vh;
+  padding-top: 125px;
+  box-sizing: border-box;
+  position: relative;
+  letter-spacing: -1px;
+}
+.visual .mainText {
+  font-size: 140px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 150px 60px;
+  display: inline-block;
+}
+.visual .mainText p {
+  overflow: hidden;
+}
+.visual .subText {
+  margin-left: 20%;
+}
+.visual .scroll {
+  position: fixed;
+  left: 60px;
+  bottom: 40px;
+}
+.visual .svgAni {
+  position: absolute;
+  right: -2%;
+  top: 6%;
+  width: 55%;
+  transform: rotate(-10deg);
+}
+
+/* animation */
+@keyframes textAni {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: translate3d(0, -90px, 0) skewY(-10deg);
+    transform-origin: top left;
+  }
+}
+@keyframes textAni2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+.visual.motion .mainText {
+  transform: translate3d(0, 0, 0) skewY(0deg);
+  overflow: hidden;
+}
+.visual.motion .mainText p span {
+  display: block;
+  animation-name: textAni;
+  animation-duration: 1.8s;
+}
+.visual.motion .mainText p:nth-child(2) span {
+  animation-duration: 1.7s;
+}
+.visual.motion .mainText p:nth-child(3) span {
+  animation-duration: 1.5s;
+}
+.visual.motion .subText {
+  animation-name: textAni2;
+  animation-duration: 3s;
+}
+
+/* svg 모션 */
+@keyframes ani1 {
+  0% {
+    stroke-dashoffset: 675;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani3 {
+  0% {
+    stroke-dashoffset: 3059;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani4 {
+  0% {
+    stroke-dashoffset: 64;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani5 {
+  0% {
+    stroke-dashoffset: 55;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.visual.motion #svgAni01 {
+  stroke-dasharray: 675;
+  stroke-dashoffset: -675;
+  animation: ani1 0.5s linear 2s forwards;
+}
+.visual.motion #svgAni03 {
+  stroke-dasharray: 3059;
+  stroke-dashoffset: 3059;
+  animation: ani3 2s linear 0.1s forwards;
+}
+.visual.motion #svgAni04 {
+  stroke-dasharray: 66;
+  stroke-dashoffset: 66;
+  animation: ani4 0.2s linear 1s forwards;
+}
+.visual.motion #svgAni04 {
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+  animation: ani5 0.2s linear forwards;
+}
+
+.con01 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.con01 .videoWrap video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.con01 .title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.con01 .title h2 {
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.con02 .title {
+  width: 100%;
+  height: 100vh;
+  font-size: 170px;
+  line-height: 0.9;
+  text-align: center;
+  padding-top: 30vh;
+  box-sizing: border-box;
+}
+.con02 .title .en2 {
+  font-size: 220px;
+}
+.con02 .workList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+.con02 .workList li {
+  width: 45%;
+  margin-top: 0;
+}
+.con02 .workList li a {
+  display: block;
+}
+.con02 .workList li a .imgBox img {
+  width: 100%;
+}
+.con02 .workList li a .textBox {
+  text-align: left;
+}
+.con02 .workList li a .textBox h3 {
+  font-size: 35px;
+  font-weight: normal;
+  margin: 20px 0 5px;
+}
+.con02 .workList li a .textBox .info {
+  color: #888;
+}
+.con02 .workList li a .textBox .info p.date {
+  margin-top: 15px;
+}
+.con02 .workList li:nth-child(2n) {
+  margin-top: 200px;
+}
+.con02 .btn-more-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid #fff;
+  margin: 150px auto 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.con02 .btn-more-cont span {
+  z-index: 1;
+  color: #fff;
+  font-size: 24px;
+  transition: 0.6s;
+}
+.con02 .btn-more-cont::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: 0.6s;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.con02 .workList li a {
+  position: relative;
+}
+.con02 .workList li a .imgBox::before, .con02 .workList li a .imgBox::after {
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+.con02 .workList li a .imgBox::before {
+  width: 168px;
+  height: 168px;
+  border: 1px solid #fff;
+  background: url("/static/images/readMore2.png") no-repeat center/35px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: 0.3s;
+  opacity: 0;
+}
+.con02 .workList li a .imgBox::after {
+  width: 0;
+  height: 0;
+  background: #fff url("/static/images/readMore3.png") no-repeat center/160px;
+  transform: translate(-50%, -50%);
+  animation: spin 10s infinite linear;
+  -webkit-animation: spin 10s infinite linear;
+  -moz-animation: spin 10s infinite linear;
+  -ms-animation: spin 10s infinite linear;
+  -o-animation: spin 10s infinite linear;
+  transition: 0.4s;
+}
+.con02 .workList li a:hover .imgBox::before {
+  opacity: 1;
+  z-index: 2;
+}
+.con02 .workList li a:hover .imgBox::after {
+  width: 168px;
+  height: 168px;
+}
+.con02 .workList li a:hover .imgBox img {
+  filter: brightness(50%);
+}
+.con02 .btn-more-cont:hover span {
+  color: #000;
+  z-index: 1;
+  font-weight: bold;
+}
+.con02 .btn-more-cont:hover::before {
+  bottom: 0;
+}
+
+.con03 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: 200px;
+}
+.con03 .textWrap {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.con03 .textWrap .title {
+  font-size: 18px;
+}
+.con03 .textWrap ul li {
+  font-size: 100px;
+  line-height: 1.2;
+}
+.con03 .textWrap ul li .en2 {
+  padding-left: 5px;
+}
+
+.con03 .btnWrap {
+  position: absolute;
+  right: -50%;
+  top: 60%;
+  z-index: 3;
+}
+.con03 .btnWrap a {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  position: relative;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.con03 .btnWrap a img {
+  width: 22%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.con03 .btnWrap a img:nth-child(2) {
+  opacity: 0;
+}
+.con03 .btnWrap a::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background: #fff url("/static/images/readMore3.png") no-repeat center/158px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 10s infinite;
+  transition: 0.4s;
+}
+.con03 .btnWrap a:hover {
+  border-color: transparent;
+}
+.con03 .btnWrap a:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.con03 .btnWrap a:hover img:nth-child(2) {
+  opacity: 1;
+}
+
+.simply-scroll .simply-scroll-clip {
+  overflow: hidden;
+  transform: rotate(5deg) translate(150%, 400px) scale(1.1);
+  opacity: 1;
+  filter: brightness(50%);
+}
+.simply-scroll .simply-scroll-clip .simply-scroll-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.simply-scroll .simply-scroll-clip .simply-scroll-list li {
+  width: 400px;
+}
+.simply-scroll .simply-scroll-clip .simply-scroll-list li img {
+  width: 100%;
+}
+
+.con03.motion .simply-scroll .simply-scroll-clip {
+  transform: rotate(5deg) translate(0, 400px) scale(1.1);
+  opacity: 1;
+  transition: 1.2s;
+  transition-delay: 0.3s;
+}
+.con03.motion .btnWrap {
+  right: 50%;
+  transition: 1.2s;
+}
+.con03.motion .textWrap ul li p {
+  animation: textAni 1.3s;
+}
+
+/* responsive */
+@media screen and (max-width: 1650px) {
+  .visual .svgAni {
+    top: 28%;
+  }
+  .visual .subText {
+    margin-left: 10%;
+  }
+  .con03.motion .btnWrap {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .visual .mainText {
+    font-size: 11vw;
+    width: 100%;
+  }
+  .visual .svgAni {
+    top: 39%;
+    width: 56%;
+  }
+  .visual .subText {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+  }
+  .visual .scroll {
+    padding: 0 5%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .visual .svgAni {
+    width: 73%;
+    right: 0%;
+    top: 33%;
+  }
+  .visual .subText {
+    bottom: 7%;
+  }
+  .visual .scroll {
+    bottom: 2%;
+  }
+  .con01 .title h2 {
+    font-size: 7vw;
+  }
+  .con02 .title {
+    font-size: 18vw;
+  }
+  .con02 .workList {
+    width: 90%;
+  }
+  .con03 .textWrap {
+    width: 85%;
+  }
+  .con03 .textWrap ul li {
+    font-size: 12vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .visual .svgAni {
+    width: 85%;
+    right: 3%;
+  }
+  .visual .scroll {
+    bottom: 2%;
+  }
+  .con02 .title .en2 {
+    font-size: 20vw;
+  }
+  .con02 .workList li {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .con02 .workList li a .imgBox::before, .con02 .workList li a .imgBox::after {
+    display: none;
+  }
+  .con02 .workList li a .textBox h3 {
+    font-size: 28px;
+  }
+  .con02 .workList li:nth-child(2n) {
+    margin-top: 0;
+  }
+  .con02 .btn-more-cont {
+    width: 40vw;
+    height: 15vw;
+    margin: 50px auto 0;
+  }
+  .con02 .btn-more-cont span {
+    font-size: 6vw;
+  }
+  .con02 .btn-more-cont:hover span {
+    color: #fff;
+  }
+  .con02 .btn-more-cont:hover::before {
+    display: none;
+  }
+  .con03 .btnWrap a {
+    width: 90px;
+    height: 90px;
+  }
+  .con03 .btnWrap a:hover {
+    border-color: #fff;
+  }
+  .con03 .btnWrap a:hover::before {
+    display: none;
+  }
+  .con03 .btnWrap a:hover img:nth-child(2) {
+    display: none;
+  }
+  .simply-scroll .simply-scroll-clip {
+    transform: rotate(10deg) translate(20%, 400px) scale(1.2);
+  }
+  .simply-scroll .simply-scroll-clip .simply-scroll-list li {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .visual {
+    padding-top: 100px;
+  }
+  .visual .mainText {
+    margin: 0 0 150px 25px;
+  }
+  .visual .svgAni {
+    width: 100%;
+    right: -1%;
+    top: 30%;
+  }
+  .visual .subText {
+    bottom: 10%;
+  }
+  .con03 .textWrap ul li .en2 {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .visual {
+    padding-top: 90px;
+  }
+  .visual .svgAni {
+    width: 90%;
+  }
+  .visual .subText {
+    font-size: 14px;
+    bottom: 9%;
+  }
+  .visual .scroll {
+    font-size: 14px;
+  }
+  .con03.motion .simply-scroll .simply-scroll-clip {
+    transform: rotate(10deg) translate(20%, 300px) scale(1.2);
+  }
+}
