@@ -4,7 +4,7 @@ json 파일 맨위 1개 데이터는 상단 TOP 영역
 
 var list_data = null;
 var pointer = 0;
-var page_size = 10;
+var page_size = 6;
 
 function loadWorkData(url) {
     $.ajax({
@@ -21,7 +21,7 @@ function loadWorkData(url) {
             // drawList();
             // drawTopNews();
 
-            if (list_data.length > 10) $(".btn-more-cont").show();
+            if (list_data.length > page_size) $(".btn-more-cont").show();
         },
 
         error: function (request, status, error) {},
