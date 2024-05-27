@@ -94,9 +94,14 @@
 }
 @keyframes ani3 {
   0% {
+    opacity: 0;
     stroke-dashoffset: 1787;
   }
+  1% {
+    opacity: 1;
+  }
   100% {
+    opacity: 1;
     stroke-dashoffset: 0;
   }
 }
@@ -111,6 +116,7 @@
   animation: ani2 0.2s linear forwards;
 }
 .visual.motion #svgAni03 {
+  opacity: 0;
   stroke-dasharray: 1787;
   stroke-dashoffset: 1787;
   animation: ani3 0.9s linear 0.7s forwards;

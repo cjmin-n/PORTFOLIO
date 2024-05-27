@@ -106,9 +106,14 @@
 }
 @keyframes ani3 {
     0% {
+        opacity: 0;
         stroke-dashoffset: 1787;
     }
+    1% {
+        opacity: 1;
+    }
     100% {
+        opacity: 1;
         stroke-dashoffset: 0;
     }
 }
@@ -126,6 +131,7 @@
             animation: ani2 0.2s linear forwards;
         }
         #svgAni03 {
+            opacity: 0;
             stroke-dasharray: 1787; // 실제보다 2정도 늘려서
             stroke-dashoffset: 1787;
             animation: ani3 0.9s linear 0.7s forwards;
