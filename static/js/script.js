@@ -48,7 +48,7 @@ $(function () {
         .find("path")
         .each(function (i, path) {
             var length = path.getTotalLength();
-            console.log(length);
+            // console.log(length);
         });
     // $(".svgAni")
     //     .find("#svgAni01")
