@@ -76,55 +76,50 @@
 /* svg 모션 */
 @keyframes ani1 {
   0% {
-    stroke-dashoffset: 675;
+    stroke-dashoffset: 1154;
   }
   100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani2 {
+  0% {
+    stroke-dashoffset: 64;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
     stroke-dashoffset: 0;
   }
 }
 @keyframes ani3 {
   0% {
-    stroke-dashoffset: 3059;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes ani4 {
-  0% {
-    stroke-dashoffset: 64;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes ani5 {
-  0% {
-    stroke-dashoffset: 55;
+    stroke-dashoffset: 1787;
   }
   100% {
     stroke-dashoffset: 0;
   }
 }
 .visual.motion #svgAni01 {
-  stroke-dasharray: 675;
-  stroke-dashoffset: -675;
-  animation: ani1 0.5s linear 2s forwards;
+  stroke-dasharray: 1154;
+  stroke-dashoffset: -1154;
+  animation: ani1 0.6s linear 0.1s forwards;
+}
+.visual.motion #svgAni02 {
+  stroke-dasharray: 64;
+  stroke-dashoffset: 64;
+  animation: ani2 0.2s linear forwards;
 }
 .visual.motion #svgAni03 {
-  stroke-dasharray: 3059;
-  stroke-dashoffset: 3059;
-  animation: ani3 2s linear 0.1s forwards;
+  stroke-dasharray: 1787;
+  stroke-dashoffset: 1787;
+  animation: ani3 0.9s linear 0.7s forwards;
 }
 .visual.motion #svgAni04 {
-  stroke-dasharray: 66;
-  stroke-dashoffset: 66;
-  animation: ani4 0.2s linear 1s forwards;
-}
-.visual.motion #svgAni04 {
-  stroke-dasharray: 57;
-  stroke-dashoffset: 57;
-  animation: ani5 0.2s linear forwards;
+  opacity: 0;
+  stroke-dasharray: 64;
+  stroke-dashoffset: 64;
+  animation: ani2 0.2s linear 0.8s forwards;
 }
 
 .con01 {
